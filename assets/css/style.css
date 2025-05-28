@@ -1,0 +1,21 @@
+.banner>.container {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.726), rgba(0, 0, 0, 0.774)), url('../imagens/bg-banner.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: transparent !important;
+}
+
+.jumbotron.bg-dark,
+.jumbotron.text-white {
+    background: transparent !important;
+    color: inherit;
+}
+
+/* Limita a altura da logo na navbar para 100px mantendo responsividade */
+.logo-navbar {
+    height: 110px;
+    width: auto;
+    max-width: 100%;
+    display: block;
+}
