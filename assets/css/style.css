@@ -19,3 +19,42 @@
     max-width: 100%;
     display: block;
 }
+
+.animacao-lateral-esquerda.animar-transicao {
+    animation: slideInFromLeft 900ms ease-out both;
+}
+
+.animacao-lateral-direita.animar-transicao {
+    animation: slideInFromRight 900ms ease-out both;
+}
+
+@keyframes slideInFromLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-70px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromRight {
+    from {
+        opacity: 0;
+        transform: translateX(70px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .animacao-lateral-esquerda.animar-transicao,
+    .animacao-lateral-direita.animar-transicao {
+        animation: none;
+    }
+}

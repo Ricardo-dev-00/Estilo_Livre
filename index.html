@@ -55,7 +55,7 @@
                 </div>
             </nav>
         </section>
-        <section class="banner">
+        <section class="banner animacao-lateral-esquerda animar-transicao">
             <div class="container">
                 <div class="jumbotron text-center py-5 bg-dark text-white rounded-4 shadow-lg">
                     <h1 class="display-3 fw-bold mb-3">Bem-vindo à Estilo Livre</h1>
@@ -66,14 +66,14 @@
                     <hr class="my-4 border-0">
 
                     <p class="lead">
-                        <a class="btn bg-success bg-gradient btn-lg px-5 py-3 fw-semibold text-light " href="#"
-                            role="button">Agende seu
-                            horário</a>
+                        <button class="btn bg-success bg-gradient btn-lg px-5 py-3 fw-semibold text-light"
+                            type="button" data-bs-toggle="modal" data-bs-target="#modalAgendamento">Agende seu
+                            horário</button>
                     </p>
                 </div>
             </div>
         </section>
-        <section class="sobre mb-5 mt-5" id="sobre">
+        <section class="sobre mb-5 mt-5 animacao-lateral-direita animar-transicao" id="sobre">
             <div class="container py-5">
                 <div class="row align-items-center">
                     <div class="col-md-6 mb-4 mb-md-0">
@@ -93,7 +93,7 @@
                 </div>
             </div>
         </section>
-        <section class="servicos mb-5" id="servicos">
+        <section class="servicos mb-5 animacao-lateral-esquerda animar-transicao" id="servicos">
             <div class="container py-1">
                 <h2 class="fw-bold mb-4 text-center">Nossos Serviços</h2>
                 <div class="row g-4 justify-content-center">
@@ -127,10 +127,30 @@
                             </div>
                         </div>
                     </div>
+                    <div class="col-md-4 col-sm-6">
+                        <div class="card h-100 shadow border-0">
+                            <img src="assets/imagens/sobrancelha.jpg" class="card-img-top" alt="Design de Sobrancelha">
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold">Design de Sobrancelha</h5>
+                                <p class="card-text">Alinhamento e desenho de sobrancelha para realçar sua expressão
+                                    com naturalidade.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <div class="card h-100 shadow border-0">
+                            <img src="assets/imagens/bg-banner.jpg" class="card-img-top" alt="Pacotes Especiais">
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold">Pacotes Especiais</h5>
+                                <p class="card-text">Combos com serviços completos e benefícios para manter seu estilo
+                                    sempre em dia.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
-        <section class="depoimentos mb-5" id="depoimentos">
+        <section class="depoimentos mb-5 animacao-lateral-direita animar-transicao" id="depoimentos">
             <div class="container py-5">
                 <h2 class="fw-bold mb-4 text-center">Depoimentos de Clientes</h2>
                 <div id="carouselDepoimentos" class="carousel slide" data-bs-ride="carousel">
@@ -204,7 +224,7 @@
                 </div>
             </div>
         </section>
-        <section class="contato" id="contato">
+        <section class="contato animacao-lateral-esquerda animar-transicao" id="contato">
             <div class="container">
                 <h2 class="fw-bold mb-4 text-center">Fale Conosco</h2>
                 <form>
@@ -225,7 +245,66 @@
             </div>
         </section>
     </main>
-    <footer class="py-2 bg-body-tertiary mt-5">
+    <div class="modal fade" id="modalAgendamento" tabindex="-1" aria-labelledby="modalAgendamentoLabel"
+        data-bs-backdrop="static" data-bs-keyboard="false" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalAgendamentoLabel">Agende seu horário</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="formAgendamento">
+                        <div class="mb-3">
+                            <label for="agendamentoNome" class="form-label">Nome completo</label>
+                            <input type="text" class="form-control" id="agendamentoNome" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="agendamentoTelefone" class="form-label">Telefone</label>
+                            <input type="tel" class="form-control" id="agendamentoTelefone" placeholder="(11) 99999-9999"
+                                required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="agendamentoServico" class="form-label">Serviço</label>
+                            <select class="form-select" id="agendamentoServico" required>
+                                <option value="" selected disabled>Selecione um serviço</option>
+                                <option>Corte de Cabelo</option>
+                                <option>Barba</option>
+                                <option>Hidratação</option>
+                                <option>Design de Sobrancelha</option>
+                                <option>Pacotes Especiais</option>
+                            </select>
+                        </div>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label for="agendamentoData" class="form-label">Data</label>
+                                <input type="date" class="form-control" id="agendamentoData" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="agendamentoHora" class="form-label">Horário</label>
+                                <input type="time" class="form-control" id="agendamentoHora" required>
+                            </div>
+                        </div>
+                        <div class="mt-3">
+                            <label for="agendamentoObservacoes" class="form-label">Observações</label>
+                            <textarea class="form-control" id="agendamentoObservacoes" rows="3"
+                                placeholder="Opcional"></textarea>
+                        </div>
+                        <button type="submit" class="btn bg-success bg-gradient text-light w-100 mt-4">Solicitar
+                            agendamento</button>
+                    </form>
+                    <div id="confirmacaoAgendamento" class="d-none text-center" aria-live="polite">
+                        <h6 class="fw-bold mb-3">Agendamento enviado com sucesso!</h6>
+                        <p class="mb-4">Recebemos sua solicitação e em breve entraremos em contato para confirmar seu
+                            horário.</p>
+                        <button type="button" class="btn bg-success bg-gradient text-light" id="btnVoltarInicio">Voltar
+                            para página inicial</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="py-2 bg-body-tertiary mt-5 animacao-lateral-direita animar-transicao">
         <div class="container">
             <div class="row">
                 <div class="col-6 col-md-2 mb-3">
@@ -291,6 +370,61 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
         crossorigin="anonymous"></script>
+    <script>
+        (function () {
+            const linksNavegacao = document.querySelectorAll('.navbar a[href^="#"]');
+
+            linksNavegacao.forEach(function (link) {
+                link.addEventListener('click', function () {
+                    const destino = this.getAttribute('href');
+                    const secao = destino ? document.querySelector(destino) : null;
+
+                    if (!secao) {
+                        return;
+                    }
+
+                    secao.classList.remove('animar-transicao');
+                    void secao.offsetWidth;
+                    secao.classList.add('animar-transicao');
+                });
+            });
+        })();
+
+        (function () {
+            const formAgendamento = document.getElementById('formAgendamento');
+            const confirmacaoAgendamento = document.getElementById('confirmacaoAgendamento');
+            const btnVoltarInicio = document.getElementById('btnVoltarInicio');
+            const modalAgendamento = document.getElementById('modalAgendamento');
+
+            if (!formAgendamento || !confirmacaoAgendamento || !btnVoltarInicio || !modalAgendamento) {
+                return;
+            }
+
+            formAgendamento.addEventListener('submit', function (event) {
+                event.preventDefault();
+
+                if (!formAgendamento.checkValidity()) {
+                    formAgendamento.reportValidity();
+                    return;
+                }
+
+                formAgendamento.classList.add('d-none');
+                confirmacaoAgendamento.classList.remove('d-none');
+            });
+
+            modalAgendamento.addEventListener('show.bs.modal', function () {
+                formAgendamento.reset();
+                formAgendamento.classList.remove('d-none');
+                confirmacaoAgendamento.classList.add('d-none');
+            });
+
+            btnVoltarInicio.addEventListener('click', function () {
+                const instanciaModal = bootstrap.Modal.getOrCreateInstance(modalAgendamento);
+                instanciaModal.hide();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        })();
+    </script>
 </body>
 
 </html>
