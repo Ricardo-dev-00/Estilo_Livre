@@ -42,6 +42,19 @@
     object-fit: cover;
 }
 
+#carouselDepoimentos .carousel-inner {
+    min-height: 220px;
+}
+
+#carouselDepoimentos .carousel-item {
+    min-height: 220px;
+}
+
+#carouselDepoimentos blockquote {
+    margin-bottom: 0;
+    max-width: 640px;
+}
+
 @keyframes slideInFromLeft {
     from {
         opacity: 0;
