@@ -1,7 +1,7 @@
 # 💈 Barbearia Estilo Livre
 
 <p align="center">
-  <img src="https://github.com/Ricardo-dev-00/imagens/blob/main/depois1.png?raw=true" alt="Preview do projeto" width="100%">
+  <img src="https://github.com/Ricardo-dev-00/imagens/blob/main/depois1.png?raw=true" alt="Performance após otimização" width="100%">
 </p>
 
 ---
@@ -10,13 +10,13 @@
 
 A **Barbearia Estilo Livre** é uma landing page moderna e responsiva desenvolvida como parte do módulo de **Desempenho e Otimização para Web** do curso de Desenvolvimento Front-End da EBAC.
 
-O projeto tem como foco a aplicação prática de técnicas de **otimização de performance**, com base em métricas reais obtidas através de ferramentas como Lighthouse e PageSpeed Insights.
+O projeto teve como foco principal a análise e otimização de performance, aplicando melhorias baseadas em métricas reais obtidas através do PageSpeed Insights.
 
 ---
 
 ## 🧠 Objetivo
 
-Aplicar conceitos de otimização para melhorar significativamente a performance de uma aplicação web, analisando gargalos e implementando soluções práticas.
+Identificar gargalos de performance em uma aplicação web real e aplicar técnicas de otimização para melhorar significativamente a experiência do usuário, especialmente em dispositivos móveis.
 
 ---
 
@@ -29,19 +29,15 @@ Aplicar conceitos de otimização para melhorar significativamente a performance
 
 ---
 
-## 📸 Preview da Aplicação
+## 🌐 Acesse o Projeto
 
-<p align="center">
-  <img src="https://github.com/Ricardo-dev-00/imagens/blob/main/depois1.png?raw=true" width="30%">
-  <img src="https://github.com/Ricardo-dev-00/imagens/blob/main/depois2.png?raw=true" width="30%">
-  <img src="https://github.com/Ricardo-dev-00/imagens/blob/main/eepois3.png?raw=true" width="30%">
-</p>
+👉 https://ricardo-dev-00.github.io/Estilo_Livre/
 
 ---
 
 ## ⚠️ Gargalos Identificados
 
-Através da análise inicial de desempenho, foram encontrados os seguintes problemas:
+Durante a análise inicial de performance, foram encontrados os seguintes problemas:
 
 - 🖼️ Imagens extremamente pesadas (mais de 16MB no total)  
 - 📉 LCP extremamente alto (~79 segundos)  
@@ -60,7 +56,7 @@ Para resolver os problemas identificados, foram implementadas as seguintes otimi
 - ✅ Redução do tamanho total da página  
 - ✅ Minificação de CSS, JavaScript e HTML  
 - ✅ Remoção de JavaScript inline  
-- ✅ Implementação de lazy loading em imagens  
+- ✅ Implementação de lazy loading  
 - ✅ Uso de CDNs minificados  
 - ✅ Redução de recursos bloqueantes  
 
@@ -79,52 +75,84 @@ Para resolver os problemas identificados, foram implementadas as seguintes otimi
 
 ---
 
-## 📸 Testes de Performance (Antes vs Depois)
+## 📸 Testes de Performance – Antes da Otimização
 
-As imagens abaixo são **prints do PageSpeed Insights**, demonstrando os resultados reais da página antes e depois das otimizações.
+As imagens abaixo são **prints do PageSpeed Insights**, mostrando os resultados antes das melhorias.
 
-### ❌ Antes da Otimização
-
-<p align="center">
-  <img src="https://github.com/Ricardo-dev-00/imagens/blob/84ffeb328213e9750cce19cbd0e9506cefac1f5b/inicio01.png" width="30%">
-  <img src="https://github.com/Ricardo-dev-00/imagens/blob/main/inicio02.png?raw=true" width="30%">
-  <img src="https://github.com/Ricardo-dev-00/imagens/blob/main/inicio03.png?raw=true" width="30%">
-</p>
-
-💬 **Análise:**
-- Tempo de carregamento extremamente alto  
-- LCP crítico  
-- Página pesada e pouco eficiente  
-
----
-
-### ✅ Depois da Otimização
+### 📊 Visão Geral
 
 <p align="center">
-  <img src="https://github.com/Ricardo-dev-00/imagens/blob/main/depois1.png?raw=true" width="30%">
-  <img src="https://github.com/Ricardo-dev-00/imagens/blob/main/depois2.png?raw=true" width="30%">
-  <img src="https://github.com/Ricardo-dev-00/imagens/blob/main/eepois3.png?raw=true" width="30%">
+  <img src="https://github.com/Ricardo-dev-00/imagens/blob/84ffeb328213e9750cce19cbd0e9506cefac1f5b/inicio01.png" width="80%">
 </p>
 
-💬 **Análise:**
-- Performance excelente (97/100)  
-- Carregamento rápido ⚡  
-- Melhor experiência do usuário em mobile  
+💬 Performance classificada como **regular (71/100)**, indicando problemas no carregamento.
 
 ---
 
-## 🌐 Acesse o Projeto
+### 📉 Métricas
 
-👉 https://ricardo-dev-00.github.io/Estilo_Livre/
+<p align="center">
+  <img src="https://github.com/Ricardo-dev-00/imagens/blob/main/inicio02.png?raw=true" width="80%">
+</p>
+
+💬 Destaque negativo para:
+- **LCP extremamente alto (79,6s)** ❌  
+- Carregamento lento do conteúdo principal  
 
 ---
 
-## 🚀 Como Executar
+### ⚠️ Problemas Identificados
 
-```bash
-git clone git@github.com:Ricardo-dev-00/Estilo_Livre.git
+<p align="center">
+  <img src="https://github.com/Ricardo-dev-00/imagens/blob/main/inicio03.png?raw=true" width="80%">
+</p>
 
-## 🚀 Execução local
+💬 Principais gargalos:
+- Imagens pesadas  
+- CSS bloqueante  
+- Alto payload de rede  
+
+---
+
+## 📸 Testes de Performance – Após Otimização
+
+Resultados após aplicação das melhorias.
+
+### 📊 Visão Geral
+
+<p align="center">
+  <img src="https://github.com/Ricardo-dev-00/imagens/blob/main/depois1.png?raw=true" width="80%">
+</p>
+
+💬 Performance elevada para **97/100** 🚀
+
+---
+
+### ⚡ Métricas Otimizadas
+
+<p align="center">
+  <img src="https://github.com/Ricardo-dev-00/imagens/blob/main/depois2.png?raw=true" width="80%">
+</p>
+
+💬 Melhorias significativas:
+- **LCP: 2,4s** (antes 79,6s)  
+- FCP: 1,7s  
+- Speed Index: 1,8s  
+
+---
+
+## 📈 Impacto das Melhorias
+
+Após as otimizações:
+
+- ⚡ Carregamento muito mais rápido  
+- 📱 Melhor experiência mobile  
+- 🚀 Redução extrema do tempo de renderização  
+- 📉 Diminuição do tamanho da página  
+
+---
+
+## 🚀 Execução Local
 
 - `index.html` → versão de desenvolvimento  
 - `index.min.html` → versão otimizada  
@@ -140,7 +168,7 @@ O projeto está publicado via **GitHub Pages**.
 ## 📈 Diferenciais
 
 - 🔥 Caso real de otimização de performance  
-- 📊 Baseado em métricas reais (PageSpeed)  
+- 📊 Baseado em métricas reais (PageSpeed Insights)  
 - ⚡ Redução extrema de LCP (79s → 2.4s)  
 - 💼 Projeto ideal para portfólio front-end  
 
@@ -149,6 +177,7 @@ O projeto está publicado via **GitHub Pages**.
 ## 👨‍💻 Autor
 
 **Ricardo Vieira**  
+
 📧 ricardo.dev.of@gmail.com  
 🔗 https://github.com/Ricardo-dev-00  
 
@@ -156,4 +185,4 @@ O projeto está publicado via **GitHub Pages**.
 
 ## 📜 Licença
 
-Este projeto está sob a licença **MIT**.
+Este projeto está sob a licença MIT.
