@@ -12,6 +12,13 @@
     color: inherit;
 }
 
+.banner .jumbotron {
+    min-height: 420px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 /* Limita a altura da logo na navbar para 100px mantendo responsividade */
 .logo-navbar {
     height: 110px;
@@ -28,13 +35,11 @@
     animation: slideInFromRight 900ms ease-out both;
 }
 
-.sobre,
-.servicos,
-.depoimentos,
-.contato,
-footer {
-    content-visibility: auto;
-    contain-intrinsic-size: 1px 700px;
+.card-img-top {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 800 / 533;
+    object-fit: cover;
 }
 
 @keyframes slideInFromLeft {
