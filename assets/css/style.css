@@ -1,5 +1,5 @@
 .banner>.container {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.726), rgba(0, 0, 0, 0.774)), url('../imagens/bg-banner.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.726), rgba(0, 0, 0, 0.774)), url('../imagens/bg-banner.webp');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

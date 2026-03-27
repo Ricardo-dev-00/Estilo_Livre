@@ -25,6 +25,17 @@ Acesse a página online: [https://ricardo-dev-00.github.io/Estilo_Livre/](https:
 - **Bootstrap 5**
 - **Font Awesome** (ícones)
 
+## ⚡ Otimizações de Performance Aplicadas
+
+- **Minificação de CSS:** `assets/css/style.min.css`
+- **Minificação de JavaScript:** `assets/js/app.min.js`
+- **Minificação de HTML:** `index.min.html`
+- **JavaScript inline removido:** scripts migrados para `assets/js/app.js`
+- **Lazy loading de imagens:** aplicado nas imagens fora da dobra em `index.html`
+- **CDNs minificados:** Bootstrap e Font Awesome já em versões `.min`
+
+> Observação: a conversão de imagens para WebP ficou separada para execução manual.
+
 ## 📁 Estrutura do Projeto
 
 ```
@@ -43,7 +54,8 @@ Trabalhos/Exercício módulo 14/
    ```bash
    git clone git@github.com:Ricardo-dev-00/Estilo_Livre.git
    ```
-2. Abra o arquivo `index.html` em seu navegador.
+2. Para desenvolvimento e leitura do código, abra `index.html`.
+3. Para versão otimizada, abra `index.min.html`.
 
 ## 📋 Regras e Detalhes
 
