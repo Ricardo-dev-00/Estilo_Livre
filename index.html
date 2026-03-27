@@ -4,16 +4,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" as="style"
+        crossorigin onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    </noscript>
+    <link rel="preload" as="image" href="assets/imagens/bg-banner.webp" fetchpriority="high">
     <meta name="description"
         content="Página de exemplo para uma barbearia fictícia chamada Estilo Livre, com informações sobre serviços, depoimentos e contato.">
     <meta name="keywords" content="barbearia, estilo livre, cortes de cabelo, barba, hidratação, depoimentos, contato">
     <meta name="author" content="Ricardo Vieira">
     <link rel="icon" href="assets/imagens/tesoura.ico" type="image/x-icon">
-    <link rel="stylesheet" href="assets/css/style.min.css">
-    <!-- Font Awesome para ícones sociais -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preload" href="assets/css/style.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="assets/css/style.min.css">
+    </noscript>
     <title>Estilo Livre</title>
 </head>
 
@@ -25,7 +33,8 @@
                 <div class="container-fluid px-6 px-sm-0">
                     <a class="navbar-brand fw-bold fs-3 d-flex align-items-center gap-2" href="index.html"><img
                         src="assets/imagens/logo.webp" alt="logo da pagina estilo livre"
-                            class="img-fluid logo-navbar">
+                        class="img-fluid logo-navbar" width="220" height="110" loading="eager"
+                        decoding="async" fetchpriority="high">
                     </a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -78,7 +87,10 @@
                 <div class="row align-items-center">
                     <div class="col-md-6 mb-4 mb-md-0">
                         <img src="assets/imagens/sobre.webp" alt="Barbearia Estilo Livre"
-                            class="img-fluid rounded-4 shadow" loading="lazy" decoding="async">
+                            srcset="assets/imagens/sobre-400.webp 400w, assets/imagens/sobre.webp 900w"
+                            sizes="(max-width: 576px) 100vw, (max-width: 992px) 50vw, 540px"
+                            class="img-fluid rounded-4 shadow" loading="lazy" decoding="async" width="900"
+                            height="600">
                     </div>
                     <div class="col-md-6">
                         <h2 class="fw-bold mb-3">Sobre Nós</h2>
@@ -100,7 +112,9 @@
                     <div class="col-md-4 col-sm-6">
                         <div class="card h-100 shadow border-0">
                             <img src="assets/imagens/corte-cabelo.webp" class="card-img-top" alt="Corte de Cabelo"
-                                loading="lazy" decoding="async">
+                                srcset="assets/imagens/corte-cabelo-400.webp 400w, assets/imagens/corte-cabelo.webp 800w"
+                                sizes="(max-width: 768px) 100vw, (max-width: 992px) 50vw, 388px"
+                                loading="lazy" decoding="async" width="800" height="533">
                             <div class="card-body">
                                 <h5 class="card-title fw-bold">Corte de Cabelo</h5>
                                 <p class="card-text">Cortes modernos, clássicos e personalizados para valorizar seu
@@ -111,7 +125,9 @@
                     <div class="col-md-4 col-sm-6">
                         <div class="card h-100 shadow border-0">
                             <img src="assets/imagens/barba.webp" class="card-img-top" alt="Barba" loading="lazy"
-                                decoding="async">
+                                srcset="assets/imagens/barba-400.webp 400w, assets/imagens/barba.webp 800w"
+                                sizes="(max-width: 768px) 100vw, (max-width: 992px) 50vw, 388px"
+                                decoding="async" width="800" height="533">
                             <div class="card-body">
                                 <h5 class="card-title fw-bold">Barba</h5>
                                 <p class="card-text">Modelagem, alinhamento e cuidados especiais para uma barba
@@ -122,7 +138,9 @@
                     <div class="col-md-4 col-sm-6">
                         <div class="card h-100 shadow border-0">
                             <img src="assets/imagens/hidratacao.webp" class="card-img-top" alt="Hidratação"
-                                loading="lazy" decoding="async">
+                                srcset="assets/imagens/hidratacao-400.webp 400w, assets/imagens/hidratacao.webp 800w"
+                                sizes="(max-width: 768px) 100vw, (max-width: 992px) 50vw, 388px"
+                                loading="lazy" decoding="async" width="800" height="533">
                             <div class="card-body">
                                 <h5 class="card-title fw-bold">Hidratação</h5>
                                 <p class="card-text">Tratamentos de hidratação para cabelo e barba, garantindo maciez e
@@ -133,7 +151,9 @@
                     <div class="col-md-4 col-sm-6">
                         <div class="card h-100 shadow border-0">
                             <img src="assets/imagens/sobrancelha.webp" class="card-img-top" alt="Design de Sobrancelha"
-                                loading="lazy" decoding="async">
+                                srcset="assets/imagens/sobrancelha-400.webp 400w, assets/imagens/sobrancelha.webp 800w"
+                                sizes="(max-width: 768px) 100vw, (max-width: 992px) 50vw, 388px"
+                                loading="lazy" decoding="async" width="800" height="533">
                             <div class="card-body">
                                 <h5 class="card-title fw-bold">Design de Sobrancelha</h5>
                                 <p class="card-text">Alinhamento e desenho de sobrancelha para realçar sua expressão
@@ -144,7 +164,7 @@
                     <div class="col-md-4 col-sm-6">
                         <div class="card h-100 shadow border-0">
                             <img src="assets/imagens/bg-banner.webp" class="card-img-top" alt="Pacotes Especiais"
-                                loading="lazy" decoding="async">
+                                loading="lazy" decoding="async" width="800" height="533">
                             <div class="card-body">
                                 <h5 class="card-title fw-bold">Pacotes Especiais</h5>
                                 <p class="card-text">Combos com serviços completos e benefícios para manter seu estilo
@@ -365,9 +385,9 @@
             <div class="d-flex flex-column align-items-center py-4 my-4 border-top">
                 <p class="text-center">&copy; 2025 Estilo Livre Barbearia. Todos os direitos reservados.</p>
                 <ul class="list-unstyled d-flex justify-content-center gap-4 mb-0 p-0">
-                    <li><a class="link-dark" href="#"><i class="fab fa-twitter fs-2"></i></a></li>
-                    <li><a class="link-dark" href="#"><i class="fab fa-instagram fs-2"></i></a></li>
-                    <li><a class="link-dark" href="#"><i class="fab fa-facebook-f fs-2"></i></a></li>
+                    <li><a class="link-dark text-decoration-none fw-semibold" href="#" aria-label="Twitter">Twitter</a></li>
+                    <li><a class="link-dark text-decoration-none fw-semibold" href="#" aria-label="Instagram">Instagram</a></li>
+                    <li><a class="link-dark text-decoration-none fw-semibold" href="#" aria-label="Facebook">Facebook</a></li>
                 </ul>
             </div>
         </div>

@@ -28,6 +28,15 @@
     animation: slideInFromRight 900ms ease-out both;
 }
 
+.sobre,
+.servicos,
+.depoimentos,
+.contato,
+footer {
+    content-visibility: auto;
+    contain-intrinsic-size: 1px 700px;
+}
+
 @keyframes slideInFromLeft {
     from {
         opacity: 0;
