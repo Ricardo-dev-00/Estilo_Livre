@@ -16,23 +16,21 @@ Acesse a página online: [https://ricardo-dev-00.github.io/Estilo_Livre/](https:
 - **Depoimentos:** Carrossel automático e manual de depoimentos de clientes, com fotos e nomes.
 - **Formulário de Contato:** Permite que visitantes enviem mensagens para a barbearia.
 - **Rodapé Temático:** Seções institucionais, serviços, atendimento, newsletter e redes sociais centralizadas.
-- **Design Moderno:** Uso de ícones Font Awesome, fontes personalizadas e cores modernas.
+- **Design Moderno:** Visual limpo com foco em performance e legibilidade.
 
 ## 🛠️ Tecnologias Utilizadas
 
 - **HTML5**
 - **CSS3** (customizado e Bootstrap 5)
 - **Bootstrap 5**
-- **Font Awesome** (ícones)
 
 ## ⚡ Otimizações de Performance Aplicadas
 
 - **Minificação de CSS:** `assets/css/style.min.css`
 - **Minificação de JavaScript:** `assets/js/app.min.js`
-- **Minificação de HTML:** `index.min.html`
-- **JavaScript inline removido:** scripts migrados para `assets/js/app.js`
+- **JavaScript inline removido:** scripts migrados para `assets/js/app.min.js`
 - **Lazy loading de imagens:** aplicado nas imagens fora da dobra em `index.html`
-- **CDNs minificados:** Bootstrap e Font Awesome já em versões `.min`
+- **Imagens responsivas:** `srcset`/`sizes` para reduzir bytes em mobile
 
 > Observação: a conversão de imagens para WebP ficou separada para execução manual.
 
@@ -42,7 +40,9 @@ Acesse a página online: [https://ricardo-dev-00.github.io/Estilo_Livre/](https:
 Trabalhos/Exercício módulo 14/
 ├── assets/
 │   ├── css/
-│   │   └── style.css
+│   │   └── style.min.css
+│   ├── js/
+│   │   └── app.min.js
 │   └── imagens/
 │       └── (imagens do projeto)
 ├── index.html
@@ -54,13 +54,12 @@ Trabalhos/Exercício módulo 14/
    ```bash
    git clone git@github.com:Ricardo-dev-00/Estilo_Livre.git
    ```
-2. Para desenvolvimento e leitura do código, abra `index.html`.
-3. Para versão otimizada, abra `index.min.html`.
+2. Abra `index.html` em um navegador.
 
 ## 📋 Regras e Detalhes
 
 - O menu mobile aparece automaticamente em telas menores.
-- O carrossel de depoimentos troca automaticamente a cada 5 segundos, mas também pode ser controlado manualmente.
+- O carrossel de depoimentos pode ser controlado manualmente.
 - O formulário de contato exige preenchimento de todos os campos.
 - O site é totalmente estático, sem backend.
 
